@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مطعم شوكة | طعم يستاهل التجربة</title>
+<meta name="description" content="مطعم شوكة - بيتزا ومأكولات شهية في الصالحية الجديدة. توصيل حتى بابك. مفتوح حتى 4 صباحًا.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="logo">شوكة</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#menu">المنيو</a></li>
+      <li><a href="#offers">العروض</a></li>
+      <li><a href="#popular">الأكثر طلبًا</a></li>
+      <li><a href="#about">عن المطعم</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartToggle" aria-label="السلة">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a href="#menu" class="btn btn-primary nav-cta">اطلب الآن</a>
+      <button class="hamburger" id="hamburger" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ BANNER ============ -->
+<div id="banner" class="banner" style="display:none">
+  <a id="bannerLink" href="#menu" class="banner-inner">
+    <span class="banner-title" id="bannerTitle"></span>
+    <span class="banner-text" id="bannerText"></span>
+  </a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="hero-badge">5.0 تقييم العملاء</span>
+      <h1>مطعم شوكة</h1>
+      <p class="hero-tagline">"طعم يستاهل التجربة"</p>
+      <p class="hero-desc">بيتزا ومأكولات شهية تُحضّر بعناية وتوصلك لحد بابك. مكونات طازجة وأطباق تُحضّر بحب.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary btn-lg">اطلب الآن</a>
+        <a href="#menu" class="btn btn-outline btn-lg">شاهد المنيو</a>
+      </div>
+      <div class="hero-info">
+        <span>مطعم بيتزا</span>
+        <span>خدمة توصيل</span>
+        <span>مفتوح حتى 4 صباحًا</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&q=80" alt="بيتزا شهية" loading="eager">
+    </div>
+  </div>
+</header>
+
+<!-- ============ MENU ============ -->
+<section class="section section-dark" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="menuTitle"></h2>
+      <p id="menuDesc"></p>
+    </div>
+    <div class="tabs" id="menuTabs"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ============ OFFERS ============ -->
+<section class="section section-darker" id="offers">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="offersTitle"></h2>
+      <p id="offersDesc"></p>
+    </div>
+    <div class="menu-grid" id="offersGrid"></div>
+  </div>
+</section>
+
+<!-- ============ POPULAR ============ -->
+<section class="section section-dark" id="popular">
+  <div class="container">
+    <div class="section-head">
+      <h2 id="popularTitle"></h2>
+      <p id="popularDesc"></p>
+    </div>
+    <div class="menu-grid" id="popularGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHY SHOKA ============ -->
+<section class="section section-darker" id="about">
+  <div class="container">
+    <div class="section-head"><h2>لماذا شوكة؟</h2></div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 2L2 22h20L12 2z"></path><circle cx="12" cy="15" r="2"></circle></svg>
+        </div>
+        <h3>مكونات طازجة</h3><p>نختار أفضل المكونات يوميًا.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+        </div>
+        <h3>تحضير بعناية</h3><p>كل طبق يُحضّر عند الطلب.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        </div>
+        <h3>توصيل</h3><p>نوصل طلبك لحد بابك.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <h3>خدمة عملاء</h3><p>دائمًا في خدمتك.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </div>
+        <h3>متاح حتى وقت متأخر</h3><p>مفتوح حتى 4 صباحًا.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFO + MAP ============ -->
+<section class="section section-dark" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <div class="section-head" style="text-align:right"><h2>موقعنا</h2></div>
+      <h3 id="infoName">مطعم شوكة</h3>
+      <p><i class="fa-solid fa-location-dot"></i> <span id="infoAddress"></span></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:01007760265" id="infoPhone">01007760265</a></p>
+      <p><i class="fa-solid fa-clock"></i> <span id="infoHours"></span></p>
+      <p><i class="fa-solid fa-star" style="color:#d4af37"></i> <span id="infoRating"></span></p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="directionsBtn" target="_blank" rel="noopener">فتح الاتجاهات</a>
+        <a class="btn btn-outline" id="facebookBtn" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe id="mapFrame" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=مول+النيل+بلازا+الظهير+الصحراوي+الصالحية+الجديدة&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section section-darker">
+  <div class="container">
+    <div class="section-head">
+      <h2>تقييمات العملاء</h2>
+      <p id="reviewsMeta"></p>
+    </div>
+    <div class="reviews" id="reviewsList"></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">شوكة</div>
+      <p>مطعم بيتزا — الصالحية الجديدة</p>
+    </div>
+    <div>
+      <p><i class="fa-solid fa-phone"></i> 01007760265</p>
+      <p><i class="fa-solid fa-clock"></i> مفتوح حتى 4:00 صباحًا</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="year"></span> مطعم شوكة — جميع الحقوق محفوظة</div>
+</footer>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<div class="floating">
+  <a href="tel:01007760265" class="float-btn call" aria-label="اتصال"><i class="fa-solid fa-phone"></i></a>
+  <a href="#" id="floatWhatsapp" class="float-btn whatsapp" target="_blank" rel="noopener" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+
+<!-- ============ CART DRAWER ============ -->
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h3>سلة المشتريات</h3>
+    <button id="closeCart" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-summary">
+    <div class="row"><span>إجمالي المنتجات</span><span id="cartSubtotal">0 جنيه</span></div>
+    <div class="row"><span>رسوم التوصيل</span><span id="cartDelivery">0 جنيه</span></div>
+    <div class="row total"><span>الإجمالي النهائي</span><span id="cartTotal">0 جنيه</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">إتمام الطلب</button>
+  </div>
+</aside>
+<div class="overlay" id="overlay"></div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-content">
+    <div class="modal-head">
+      <h3>إتمام الطلب</h3>
+      <button id="closeCheckout"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="checkoutForm" class="modal-body">
+      <label>الاسم <input type="text" name="name" required></label>
+      <label>رقم الهاتف <input type="tel" name="phone" required pattern="[0-9]{11}"></label>
+      <fieldset class="order-type">
+        <legend>نوع الطلب</legend>
+        <label><input type="radio" name="orderType" value="delivery" checked> توصيل</label>
+        <label><input type="radio" name="orderType" value="pickup"> استلام من المطعم</label>
+        <label><input type="radio" name="orderType" value="dinein"> داخل المطعم</label>
+      </fieldset>
+      <div id="deliveryFields">
+        <label>العنوان بالتفصيل <input type="text" name="address"></label>
+        <label>المنطقة <input type="text" name="area"></label>
+        <label>علامة مميزة <input type="text" name="landmark"></label>
+        <button type="button" class="btn btn-outline btn-block" id="geoBtn"><i class="fa-solid fa-location-crosshairs"></i> تحديد موقعي على الخريطة</button>
+        <small id="geoStatus"></small>
+      </div>
+      <div id="pickupFields" hidden>
+        <p class="hint">عنوان المطعم: <span id="pickupAddress"></span></p>
+      </div>
+      <div id="dineinFields" hidden>
+        <label>رقم الطاولة <input type="text" name="table"></label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">تأكيد الطلب</button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div class="modal" id="successModal">
+  <div class="modal-content success">
+    <h2>تم استلام طلبك بنجاح</h2>
+    <p>رقم الطلب: <strong id="orderNumber"></strong></p>
+    <div id="orderDetails"></div>
+    <div class="success-actions">
+      <a class="btn btn-whatsapp" id="sendWhatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> تواصل مع المطعم عبر واتساب</a>
+      <a class="btn btn-outline" href="tel:01007760265"><i class="fa-solid fa-phone"></i> اتصل بالمطعم</a>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

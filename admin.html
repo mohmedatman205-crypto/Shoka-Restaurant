@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم مطعم شوكة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- Login -->
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card">
+    <h2>لوحة تحكم شوكة</h2>
+    <p>تسجيل الدخول للإدارة</p>
+    <input type="text" id="loginUser" placeholder="اسم المستخدم" required>
+    <input type="password" id="loginPass" placeholder="كلمة المرور" required>
+    <button type="submit" class="btn btn-primary">دخول</button>
+    <small>Demo: admin / shoka2024</small>
+  </form>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="dashboard" hidden>
+  <aside class="sidebar">
+    <div class="logo">شوكة</div>
+    <nav>
+      <a href="#" data-tab="overview" class="active"><i class="fa-solid fa-chart-line"></i> نظرة عامة</a>
+      <a href="#" data-tab="products"><i class="fa-solid fa-pizza-slice"></i> المنتجات</a>
+      <a href="#" data-tab="orders"><i class="fa-solid fa-receipt"></i> الطلبات</a>
+      <a href="#" data-tab="revenues"><i class="fa-solid fa-money-bill-wave"></i> الإيرادات</a>
+      <a href="#" data-tab="settings"><i class="fa-solid fa-gear"></i> الإعدادات</a>
+    </nav>
+    <button id="logoutBtn" class="logout">تسجيل خروج</button>
+  </aside>
+
+  <main class="main">
+    <section class="tab-content active" id="tab-overview">
+      <h1>نظرة عامة</h1>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="tab-content" id="tab-products">
+      <div class="head-row">
+        <h1>المنتجات</h1>
+        <button class="btn btn-primary" id="addProductBtn">+ إضافة منتج</button>
+      </div>
+      <div id="productsTable"></div>
+    </section>
+
+    <section class="tab-content" id="tab-orders">
+      <h1>الطلبات</h1>
+      <div id="ordersList"></div>
+    </section>
+
+    <section class="tab-content" id="tab-revenues">
+      <h1>الإيرادات</h1>
+      <div class="stats" id="revenueStats"></div>
+      <div style="margin:15px 0">
+        <button class="btn btn-primary" onclick="addRevenue()">+ إضافة إيراد يدوي</button>
+      </div>
+      <div id="revenuesList"></div>
+    </section>
+
+    <section class="tab-content" id="tab-settings">
+      <h1>إعدادات المطعم</h1>
+      <form id="settingsForm" class="settings-form"></form>
+    </section>
+  </main>
+</div>
+
+<!-- Product modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <div class="modal-head">
+      <h3 id="productModalTitle">إضافة منتج</h3>
+      <button id="closeProductModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="productForm" class="modal-body"></form>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
