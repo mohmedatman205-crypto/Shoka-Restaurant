@@ -40,12 +40,12 @@ const DEFAULT_DATA = {
     minOrder: 50,
     rating: 5.0,
     reviewsCount: 2,
-    icons: {
+    icons: {/*
       logo: "🍕",
       rating: "⭐",
       delivery: "🚚",
       hours: "🌙",
-      pizza: "🍕"
+      pizza: "🍕"*/
     },
     // 🔥 شريط العروض (البانر)
     banner: {
@@ -68,13 +68,13 @@ const DEFAULT_DATA = {
   },
 
   categories: [
-    { id: "pizza",    name: "البيتزا",       icon: "🍕" },
-    { id: "burger",   name: "البرجر",       icon: "🍔" },
-    { id: "crepe",    name: "الكريب",       icon: "🌯" },
-    { id: "sides",    name: "المقبلات",     icon: "🍟" },
-    { id: "drinks",   name: "المشروبات",    icon: "🥤" },
-    { id: "offers",   name: "العروض",       icon: "🔥" },
-    { id: "popular",  name: "الأكثر طلبًا", icon: "⭐" }
+    { id: "pizza",    name: "البيتزا",     /*  icon: "🍕"*/ },
+    { id: "burger",   name: "البرجر",     /*  icon: "🍔"*/ },
+    { id: "crepe",    name: "الكريب",      /* icon: "🌯"*/ },
+    { id: "sides",    name: "المقبلات",   /*  icon: "🍟" */},
+    { id: "drinks",   name: "المشروبات",   /* icon: "🥤" */},
+    { id: "offers",   name: "العروض",     /*  icon: "🔥" */},
+    { id: "popular",  name: "الأكثر طلبًا",/* icon: "⭐" */}
   ],
 
   // ============================================================
